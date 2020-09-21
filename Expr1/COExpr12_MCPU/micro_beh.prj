@@ -1,0 +1,4 @@
+verilog work "MUX4T1_5.v"
+verilog work "MCtrl.v"
+verilog work "micro.v"
+verilog work "E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//verilog/src/glbl.v"

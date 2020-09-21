@@ -1,0 +1,13 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Sep 21 20:08:00 2020
+
+drc -z Top_OExp09_IP2MCPU.ncd Top_OExp09_IP2MCPU.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   U1/U11/ALUop[1]_PWR_6_o_Mux_71_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

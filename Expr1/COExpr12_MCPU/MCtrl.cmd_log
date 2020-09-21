@@ -1,0 +1,6 @@
+vhdtdtfi -lib work {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCtrl.v} -lang verilog -prj OExp09-IP2MCPU -o MCtrl.spl -module MCtrl -template E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 MCtrl.spl {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCtrl.sym} 
+vhdtdtfi -lib work {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCtrl.v} -lang verilog -prj OExp09-IP2MCPU -o MCtrl.spl -module MCtrl -template E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w MCtrl.spl {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCtrl.sym} 
+vhdtdtfi -lib work {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCtrl.v} -lang verilog -prj OExp09-IP2MCPU -o MCtrl.spl -module MCtrl -template E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w MCtrl.spl {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCtrl.sym} 

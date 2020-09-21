@@ -1,0 +1,5 @@
+vhdtdtfi -lang verilog -prj OExp09-IP2MCPU -o "D:/Download/OExp_final 2/OExp_final 2/OExp12/MDPath.tfi" -lib work "D:/Download/OExp_final 2/OExp_final 2/OExp12//MDPath.v" -module MDPath -template E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work {D:/Download/OExp_final 2/OExp_final 2/OExp12/MDPath.v} -lang verilog -prj OExp09-IP2MCPU -o MDPath.spl -module MDPath -template E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 MDPath.spl {D:/Download/OExp_final 2/OExp_final 2/OExp12/MDPath.sym} 
+vhdtdtfi -lib work {D:/Download/OExp_final 2/OExp_final 2/OExp12/MDPath.v} -lang verilog -prj OExp09-IP2MCPU -o MDPath.spl -module MDPath -template E:/sophomore/Logic/ISE14.7/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w MDPath.spl {D:/Download/OExp_final 2/OExp_final 2/OExp12/MDPath.sym} 

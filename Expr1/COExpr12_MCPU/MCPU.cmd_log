@@ -1,0 +1,9 @@
+sch2hdl -sympath E:/COD/ORG_lab10/OExp09-IP2MCPU/ipcore_dir -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w E:/COD/ORG_lab10/OExp09-IP2MCPU/MCPU.sch 
+sch2hdl -sympath E:/COD/ORG_lab10/OExp09-IP2MCPU/ipcore_dir -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w E:/COD/ORG_lab10/OExp09-IP2MCPU/MCPU.sch 
+sch2hdl -sympath E:/COD/ORG_lab11/OExp09-IP2MCPU/ipcore_dir -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w E:/COD/ORG_lab11/OExp09-IP2MCPU/MCPU.sch 
+sch2hdl -sympath E:/COD/ORG_lab12/OExp09-IP2MCPU/ipcore_dir -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w E:/COD/ORG_lab12/OExp09-IP2MCPU/MCPU.sch 
+sch2hdl -sympath {D:/Download/OExp_final 2/OExp_final 2/OExp12/ipcore_dir} -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sch} 
+sch2hdl -sympath {D:/Download/OExp_final 2/OExp_final 2/OExp12/ipcore_dir} -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sch} 
+sch2hdl -sympath {D:/Download/OExp_final 2/OExp_final 2/OExp12/ipcore_dir} -intstyle ise -family kintex7 -verilog MCPU_drc.vf -w {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sch} 
+sch2sym -intstyle ise -family kintex7 -refsym MCPU {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sch} {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sym} 
+sch2sym -intstyle ise -family kintex7 -w -refsym MCPU {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sch} {D:/Download/OExp_final 2/OExp_final 2/OExp12/MCPU.sym} 

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/Asudy/WorkSpace/GitHub/CO_Expr/Expr4/Expr12_MCPU/clk_200Mto100M.v -lang verilog -prj OExp09-IP2MCPU -o clk_200Mto100M.spl -module clk_200Mto100M -template D:/ProgramFiles/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w clk_200Mto100M.spl D:/Asudy/WorkSpace/GitHub/CO_Expr/Expr4/Expr12_MCPU/clk_200Mto100M.sym 
