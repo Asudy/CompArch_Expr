@@ -1,19 +1,38 @@
+'''
+File:       MIPSdisassembler.py
+Purpose:    This program converts hex file (one instruction per line) to MIPS assembly.
+            Both command-line invocation & interactive input methods are supported.
+Author:     Asudy Wang
+Date:       2020-9-27
+'''
+import sys
+
+if len(sys.argv) == 3:      # Supports command line invocation
+    inFileName, outFileName = sys.argv[1], sys.argv[2]
+elif len(sys.argv) == 1:
+    inFileName, outFileName = input("Enter Input HEX File Name: "), input("Enter Output ASM File Name: ")
+else:
+    print("Usage: {} HexFile AsmFile".format(sys.argv[0]))
+    exit(1)
+
 try:
-    inFile = open(input("Enter input file name: "), 'r')
-    outFile = open(input("Enter output file name: "), 'w')
+    inFile = open(inFileName, 'r')
 except FileNotFoundError as e:
     print(e)
     exit(1)
 
 lines = inFile.readlines()
 inFile.close()
+outFile = open(outFileName, 'w')
 
+# R-Type instruction function code Decode Table
 RTypeFunct = {  0x20: "add ${2:} ${0:} ${1:}",  0x21: "addu ${2:} ${0:} ${1:}", 0x22: "sub ${2:} ${0:} ${1:}", \
                 0x23: "subu ${2:} ${0:} ${1:}", 0x24: "and ${2:} ${0:} ${1:}",  0x25: "or ${2:} ${0:} ${1:}",  \
                 0x26: "xor ${2:} ${0:} ${1:}",  0x27: "nor ${2:} ${0:} ${1:}",  0x2A: "slt ${2:} ${0:} ${1:}", \
                 0x2B: "sltu ${2:} ${0:} ${1:}", 0x0:  "sll ${2:} ${1:} {3:}",   0x2:  "srl ${2:} ${1:} {3:}",   \
                 0x8:  "jr ${0:}",               0xC:  "syscall"}
 
+# I-Type & J-Type OPCODE Decode Table
 OpCode = {  0x23: "lw ${1:} {2:}(${0:})",   0x2B: "sw ${1:} {2:}(${0:})",  0x8: "addi ${1:} ${0:} {2:}", \
             0x9:  "addiu ${1:} ${0:} {2:}", 0xC:  "andi ${1:} ${0:} {2:}", 0xD: "ori ${1:} ${0:} {2:}",  \
             0xE:  "xori ${1:} ${0:} {2:}",  0xF:  "lui ${1:} 0x{2:04X}",   0xA: "slti ${1:} ${0:} {2:}", \
