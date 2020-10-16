@@ -2,8 +2,8 @@
 # Timing constraints                                                       #
 ############################################################################
 
-	NET "CLK_200M_P" 		 					TNM_NET = TM_CLK ;
-	TIMESPEC TS_CLKIN 	 	 					= PERIOD "TM_CLK"        5 ns HIGH 50%;
+    NET "CLK_200M_P" 		 					TNM_NET = TM_CLK ;
+    TIMESPEC TS_CLKIN 	 	 					= PERIOD "TM_CLK"        5 ns HIGH 50%;
 
 #	NET "*s_SYS_CLK"  	 						TNM_NET = TM_SYS_CLK;
 # 	TIMESPEC TS_SYS_CLK 	 					= PERIOD "TM_SYS_CLK"    10 ns HIGH 50%;
@@ -32,7 +32,7 @@
 #	TIMESPEC "TS_SYS_CLK_to_UI_CLK" 			= FROM "TM_SYS_CLK"  TO "TM_UI_CLK"   	 5 ns DATAPATHONLY ;
 #	TIMESPEC "TS_UI_CLK_to_SYS_CLK" 			= FROM "TM_UI_CLK" TO "TM_SYS_CLK"    	10 ns DATAPATHONLY ;
 
-#    TIMESPEC "TS_UI_CLK_to_MIG_CLK" 			= FROM "TM_UI_CLK"  TO "TM_MIG_CLK"   	 5 ns DATAPATHONLY ;
+#   TIMESPEC "TS_UI_CLK_to_MIG_CLK" 			= FROM "TM_UI_CLK"  TO "TM_MIG_CLK"   	 5 ns DATAPATHONLY ;
 #	TIMESPEC "TS_MIG_CLK_to_UI_CLK" 			= FROM "TM_MIG_CLK" TO "TM_UI_CLK"    	 5 ns DATAPATHONLY ;
 
 # 	NET "*XRST*" 								TIG;
@@ -49,33 +49,33 @@
 ############################################################################
 
 #	## Main clock
-	NET "CLK_200M_P"							LOC = AC18		| IOSTANDARD = LVDS ;
-	NET "CLK_200M_N"							LOC = AD18		| IOSTANDARD = LVDS ;
+    NET "CLK_200M_P"							LOC = AC18		| IOSTANDARD = LVDS ;
+    NET "CLK_200M_N"							LOC = AD18		| IOSTANDARD = LVDS ;
 
 #	## FPGA RST
-	NET "RSTN"									LOC = W13		| IOSTANDARD = LVCMOS18 ;
+    NET "RSTN"									LOC = W13		| IOSTANDARD = LVCMOS18 ;
 
 #	## 7SEG
-	NET "seg_clk"							LOC = M24		| IOSTANDARD = LVCMOS33 ;
-NET "seg_clrn"				LOC = M20       | IOSTANDARD = LVCMOS33 ;
-	# NET "SEGLED_DI"								LOC = P19       | IOSTANDARD = LVCMOS33 ;
-	NET "seg_sout"								LOC = L24       | IOSTANDARD = LVCMOS33 ;
-	NET "SEG_PEN"							LOC = R18       | IOSTANDARD = LVCMOS33 ;
+    NET "seg_clk"								LOC = M24		| IOSTANDARD = LVCMOS33 ;
+# NET "seg_clrn"				LOC = M20       | IOSTANDARD = LVCMOS33 ;	# Remove
+    # NET "SEGLED_DI"							LOC = P19       | IOSTANDARD = LVCMOS33 ;
+    NET "seg_sout"								LOC = L24       | IOSTANDARD = LVCMOS33 ;
+    NET "SEG_PEN"								LOC = R18       | IOSTANDARD = LVCMOS33 ;
 
 #	## Audio out(CN6)
 #	NET "AUD_PWM"								LOC = P26       | IOSTANDARD = LVCMOS33 ;
 #	NET "AUD_SD"								LOC = M25       | IOSTANDARD = LVCMOS33 ;
 
 #	## Key Array
-	NET "BTN_x[0]" 								LOC = V17       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_x[1]" 								LOC = W18       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_x[2]" 								LOC = W19       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_x[3]" 								LOC = W15       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_x[4]" 								LOC = W16       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_y[0]" 								LOC = V18       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_y[1]" 								LOC = V19       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_y[2]" 								LOC = V14       | IOSTANDARD = LVCMOS18 ;
-	NET "BTN_y[3]" 								LOC = W14       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_x[0]" 								LOC = V17       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_x[1]" 								LOC = W18       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_x[2]" 								LOC = W19       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_x[3]" 								LOC = W15       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_x[4]" 								LOC = W16       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_y[0]" 								LOC = V18       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_y[1]" 								LOC = V19       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_y[2]" 								LOC = V14       | IOSTANDARD = LVCMOS18 ;
+    NET "BTN_y[3]" 								LOC = W14       | IOSTANDARD = LVCMOS18 ;
 #	NET "BTN_Y4" 								LOC = V16       | IOSTANDARD = LVCMOS18 ;
 
 #	## BPI Flash
@@ -186,27 +186,28 @@ NET "seg_clrn"				LOC = M20       | IOSTANDARD = LVCMOS33 ;
 #	## Arduino RST
 #	NET "RESET"        							LOC = AF25	    | IOSTANDARD = LVCMOS33 ;
 
-	NET "LED[0]"  								LOC = W23		| IOSTANDARD = LVCMOS33 ;
-	NET "LED[1]"  								LOC = AB26	    | IOSTANDARD = LVCMOS33 ;
-	NET "LED[2]"  								LOC = Y25		| IOSTANDARD = LVCMOS33 ;
-	NET "LED[3]"  								LOC = AA23	    | IOSTANDARD = LVCMOS33 ;
-	NET "LED[4]"  								LOC = Y23		| IOSTANDARD = LVCMOS33 ;
-	NET "LED[5]"  								LOC = Y22		| IOSTANDARD = LVCMOS33 ;
-   	NET "LED[6]"        						LOC = AE21	    | IOSTANDARD = LVCMOS33 ;
-	NET "LED[7]"        						LOC = AF24	    | IOSTANDARD = LVCMOS33 ;
+#   ## Arduino-Sword-002-Basic IO
+    NET "LED[0]"  								LOC = W23		| IOSTANDARD = LVCMOS33 ;
+    NET "LED[1]"  								LOC = AB26	    | IOSTANDARD = LVCMOS33 ;
+    NET "LED[2]"  								LOC = Y25		| IOSTANDARD = LVCMOS33 ;
+    NET "LED[3]"  								LOC = AA23	    | IOSTANDARD = LVCMOS33 ;
+    NET "LED[4]"  								LOC = Y23		| IOSTANDARD = LVCMOS33 ;
+    NET "LED[5]"  								LOC = Y22		| IOSTANDARD = LVCMOS33 ;
+    NET "LED[6]"        						LOC = AE21	    | IOSTANDARD = LVCMOS33 ;
+    NET "LED[7]"        						LOC = AF24	    | IOSTANDARD = LVCMOS33 ;
 
-	NET "SEGMENT[7]"	       							LOC = AA22	    | IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[6]"	       							LOC = AC23	    | IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[5]"	       							LOC = AC24	    | IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[4]"	       							LOC = W20		| IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[3]"	       							LOC = Y21		| IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[2]"	       							LOC = AD23	    | IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[1]"	       							LOC = AD24	    | IOSTANDARD = LVCMOS33 ;
-	NET "SEGMENT[0]"	       							LOC = AB22	    | IOSTANDARD = LVCMOS33 ;
-	NET "AN[3]"	       							LOC = AC22	    | IOSTANDARD = LVCMOS33 ;
-	NET "AN[2]"	       							LOC = AB21	    | IOSTANDARD = LVCMOS33 ;
-	NET "AN[1]"       							LOC = AC21	    | IOSTANDARD = LVCMOS33 ;
-	NET "AN[0]"       							LOC = AD21	    | IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[7]"	       					LOC = AA22	    | IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[6]"	       					LOC = AC23	    | IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[5]"	       					LOC = AC24	    | IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[4]"	       					LOC = W20		| IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[3]"	       					LOC = Y21		| IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[2]"	       					LOC = AD23	    | IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[1]"	       					LOC = AD24	    | IOSTANDARD = LVCMOS33 ;
+    NET "SEGMENT[0]"	       					LOC = AB22	    | IOSTANDARD = LVCMOS33 ;
+    NET "AN[3]"	       							LOC = AC22	    | IOSTANDARD = LVCMOS33 ;
+    NET "AN[2]"	       							LOC = AB21	    | IOSTANDARD = LVCMOS33 ;
+    NET "AN[1]"       							LOC = AC21	    | IOSTANDARD = LVCMOS33 ;
+    NET "AN[0]"       							LOC = AD21	    | IOSTANDARD = LVCMOS33 ;
 
 #	## Pmod(CN20)
 #	NET "JE_O[1]"								LOC = C16       | IOSTANDARD = LVCMOS33 ;
@@ -219,10 +220,10 @@ NET "seg_clrn"				LOC = M20       | IOSTANDARD = LVCMOS33 ;
 #	NET "JE_I[4]"								LOC = G16       | IOSTANDARD = LVCMOS33 ;
 
 #	## 16 Leds
-	NET "led_clk"								LOC = N26     	| IOSTANDARD = LVCMOS33 ;
-	NET "led_clrn"								LOC = N24       | IOSTANDARD = LVCMOS33 ;
-	NET "led_sout"								LOC = M26       | IOSTANDARD = LVCMOS33 ;
-NET "LED_PEN"				LOC = P18       | IOSTANDARD = LVCMOS33 ;     
+    NET "led_clk"								LOC = N26     	| IOSTANDARD = LVCMOS33 ;
+    NET "LED_PEN"				                LOC = N24       | IOSTANDARD = LVCMOS33 ;     
+    NET "led_sout"								LOC = M26       | IOSTANDARD = LVCMOS33 ;
+# NET "led_clrn"								LOC = P18       | IOSTANDARD = LVCMOS33 ;	# Remove
 #	NET "LED_DI"								LOC = R25       | IOSTANDARD = LVCMOS33 ;
 
 #	## SRAM
@@ -312,22 +313,22 @@ NET "LED_PEN"				LOC = P18       | IOSTANDARD = LVCMOS33 ;
 
 
 #	## 16 SWs
-	NET "SW[15]"								LOC = AF10      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[14]"								LOC = AF13      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[13]"								LOC = AE13      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[12]"								LOC = AF8	    | IOSTANDARD = LVCMOS15 ;
-	NET "SW[11]"								LOC = AE8	    | IOSTANDARD = LVCMOS15 ;
-	NET "SW[10]"								LOC = AF12      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[9]"									LOC = AE12      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[8]"									LOC = AE10      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[7]"									LOC = AD10      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[6]"									LOC = AD11      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[5]"								    LOC = Y12	    | IOSTANDARD = LVCMOS15 ;
-	NET "SW[4]"									LOC = Y13	    | IOSTANDARD = LVCMOS15 ;
-	NET "SW[3]"									LOC = AA12      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[2]"									LOC = AA13      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[1]"									LOC = AB10      | IOSTANDARD = LVCMOS15 ;
-	NET "SW[0]"									LOC = AA10     	| IOSTANDARD = LVCMOS15 ;
+    NET "SW[15]"								LOC = AF10      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[14]"								LOC = AF13      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[13]"								LOC = AE13      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[12]"								LOC = AF8	    | IOSTANDARD = LVCMOS15 ;
+    NET "SW[11]"								LOC = AE8	    | IOSTANDARD = LVCMOS15 ;
+    NET "SW[10]"								LOC = AF12      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[9]"									LOC = AE12      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[8]"									LOC = AE10      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[7]"									LOC = AD10      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[6]"									LOC = AD11      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[5]"								    LOC = Y12	    | IOSTANDARD = LVCMOS15 ;
+    NET "SW[4]"									LOC = Y13	    | IOSTANDARD = LVCMOS15 ;
+    NET "SW[3]"									LOC = AA12      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[2]"									LOC = AA13      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[1]"									LOC = AB10      | IOSTANDARD = LVCMOS15 ;
+    NET "SW[0]"									LOC = AA10     	| IOSTANDARD = LVCMOS15 ;
 
 #	 ## HDMI Input
 #    NET "TMDS_RX_SCL"							LOC = V24      	| IOSTANDARD = LVCMOS33 ;
@@ -355,9 +356,9 @@ NET "LED_PEN"				LOC = P18       | IOSTANDARD = LVCMOS33 ;
 #    NET "TMDS_TXC_N"								LOC = AE15		| IOSTANDARD = LVDS ;
 
 #	## TriLEDs
-	NET "CR"							LOC = V22		| IOSTANDARD = LVCMOS33 ;
-	NET "readn"							LOC = U22       | IOSTANDARD = LVCMOS33 ;
-	NET "RDY"							LOC = U21       | IOSTANDARD = LVCMOS33 ;
+    NET "CR"							LOC = V22		| IOSTANDARD = LVCMOS33 ;   # B
+    NET "readn"							LOC = U22       | IOSTANDARD = LVCMOS33 ;   # G
+    NET "RDY"							LOC = U21       | IOSTANDARD = LVCMOS33 ;   # R
 #	NET "TRI_LED1_B"							LOC = V23       | IOSTANDARD = LVCMOS33 ;
 #	NET "TRI_LED1_G"							LOC = U25       | IOSTANDARD = LVCMOS33 ;
 #	NET "TRI_LED1_R"							LOC = U24       | IOSTANDARD = LVCMOS33 ;
