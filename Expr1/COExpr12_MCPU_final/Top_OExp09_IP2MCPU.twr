@@ -1,0 +1,184 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2L
+-n 3 -fastpaths -xml Top_OExp09_IP2MCPU.twx Top_OExp09_IP2MCPU.ncd -o
+Top_OExp09_IP2MCPU.twr Top_OExp09_IP2MCPU.pcf -ucf SWORD4.ucf
+
+Design file:              Top_OExp09_IP2MCPU.ncd
+Physical constraint file: Top_OExp09_IP2MCPU.pcf
+Device,package,speed:     xc7k325t,ffg676,C,-2L (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_CLKIN = PERIOD TIMEGRP "TM_CLK" 5 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   0.700ns.
+--------------------------------------------------------------------------------
+
+Paths for end point U81/clkdiv_0 (SLICE_X107Y134.A3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.354ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U81/clkdiv_0 (FF)
+  Destination:          U81/clkdiv_0 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      0.611ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         U81/clk200m rising at 0.000ns
+  Destination Clock:    U81/clk200m rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U81/clkdiv_0 to U81/clkdiv_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X107Y134.AQ    Tcko                  0.223   U81/clkdiv<0>
+                                                       U81/clkdiv_0
+    SLICE_X107Y134.A3    net (fanout=2)        0.270   U81/clkdiv<0>
+    SLICE_X107Y134.CLK   Tas                   0.118   U81/clkdiv<0>
+                                                       U81/Mcount_clkdiv_lut<0>_INV_0
+                                                       U81/Mcount_clkdiv_xor<0>
+                                                       U81/clkdiv_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.611ns (0.341ns logic, 0.270ns route)
+                                                       (55.8% logic, 44.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLKIN = PERIOD TIMEGRP "TM_CLK" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point U81/clkdiv_0 (SLICE_X107Y134.A3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.248ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U81/clkdiv_0 (FF)
+  Destination:          U81/clkdiv_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.248ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         U81/clk200m rising at 5.000ns
+  Destination Clock:    U81/clk200m rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: U81/clkdiv_0 to U81/clkdiv_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X107Y134.AQ    Tcko                  0.100   U81/clkdiv<0>
+                                                       U81/clkdiv_0
+    SLICE_X107Y134.A3    net (fanout=2)        0.136   U81/clkdiv<0>
+    SLICE_X107Y134.CLK   Tah         (-Th)    -0.012   U81/clkdiv<0>
+                                                       U81/Mcount_clkdiv_lut<0>_INV_0
+                                                       U81/Mcount_clkdiv_xor<0>
+                                                       U81/clkdiv_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.248ns (0.112ns logic, 0.136ns route)
+                                                       (45.2% logic, 54.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLKIN = PERIOD TIMEGRP "TM_CLK" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.300ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 5.000ns
+  Low pulse: 2.500ns
+  Low pulse limit: 0.350ns (Tcl)
+  Physical resource: U81/clkdiv<0>/CLK
+  Logical resource: U81/clkdiv_0/CK
+  Location pin: SLICE_X107Y134.CLK
+  Clock network: U81/clk200m
+--------------------------------------------------------------------------------
+Slack: 4.300ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 5.000ns
+  High pulse: 2.500ns
+  High pulse limit: 0.350ns (Tch)
+  Physical resource: U81/clkdiv<0>/CLK
+  Logical resource: U81/clkdiv_0/CK
+  Location pin: SLICE_X107Y134.CLK
+  Clock network: U81/clk200m
+--------------------------------------------------------------------------------
+Slack: 4.300ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 0.700ns (1428.571MHz) (Tcp)
+  Physical resource: U81/clkdiv<0>/CLK
+  Logical resource: U81/clkdiv_0/CK
+  Location pin: SLICE_X107Y134.CLK
+  Clock network: U81/clk200m
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK_200M_N
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_200M_N     |    0.646|         |         |         |
+CLK_200M_P     |    0.646|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_200M_P
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_200M_N     |    0.646|         |         |         |
+CLK_200M_P     |    0.646|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1 paths, 0 nets, and 3 connections
+
+Design statistics:
+   Minimum period:   0.700ns{1}   (Maximum frequency: 1428.571MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Sep 28 09:16:18 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5299 MB
+
+
+

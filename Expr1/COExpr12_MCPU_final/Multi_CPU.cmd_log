@@ -1,0 +1,1 @@
+sch2hdl -sympath E:/COD/ORG_lab9/OExp09-IP2MCPU/ipcore_dir -intstyle ise -family kintex7 -verilog Multi_CPU_drc.vf -w E:/COD/ORG_lab9/OExp09-IP2MCPU/Multi_CPU.sch 

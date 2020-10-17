@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\CS\Desktop\tmp\COExpr12_MCPU_update\Top_OExp09_IP2MCPU.ncd
+OUTFILE=C:\Users\CS\Desktop\tmp\COExpr12_MCPU_update\Top_OExp09_IP2MCPU.bit
+FAMILY=Kintex7
+PART=xc7k325t-2lffg676
+WORKINGDIR=C:\Users\CS\Desktop\tmp\COExpr12_MCPU_update
+LICENSE=ISE
+USER_INFO=__0_0_0

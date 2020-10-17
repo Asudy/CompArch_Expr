@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr1/COExpr12_MCPU_update/clk_div.v -lang verilog -prj OExp09-IP2MCPU -o clk_div.spl -module clk_div -template D:/ProgramFiles/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w clk_div.spl D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr1/COExpr12_MCPU_update/clk_div.sym 

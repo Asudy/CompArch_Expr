@@ -1,0 +1,11 @@
+[Inputs]
+clk
+rst
+StepSW
+[Outputs]
+Clk_CPU
+=clkdiv[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel clk_div
+
