@@ -313,6 +313,10 @@ After modification, the top module schematic of the MCPU design is shown in the 
 
 2. After loading the new coe file to the RAM, the RAM was **successfully regenerated**. And the *Programming File* of the top module was **successfully generated and uploaded** to the new SWORD board.
 
+   The design uses the 8-digit 7-segment digital tube displays (and the 4-bit digital tube displays on the small Arduino board as well) to display the selected output. The following picture shows the operations which can be carried out on the board. (The debug function of `SW[7:5]` is also commented in the *top schematic* near the *Multi_8CH32* module.)
+
+   <img src="Lab1_img/UserGuide.png" alt="UserGuide" style="zoom: 67%;" />
+
 3. The program was executed as desired on the SWORD board. The following links are 2 video clips showcasing current PC Value & Instruction Word changing on our MCPU.
 
    > 1. PC Value Demo Video
@@ -334,4 +338,3 @@ This lab was a "warmup" lab, whose main task was to adapt our old MCPU design im
 In the process, I re-read all codes of the design, reviewing the internal logic relations between different modules, and accidentally found that the implementation of the *shift instructions* `srl` and `sll` were incorrect. My ALU was not able to shift the input according to the *shamt* field of the instruction. What's more, I found the codes about *Jump Address Construction* of the *J-Type* instruction was wrong.
 
 Besides, the completion of this lab was based on the familiarization of the new experiment environment. I got familiar with the new *user constraints* and some new features (like clock difference) about the new boards throughout these days. I'd say I've learnt a lot.
-
