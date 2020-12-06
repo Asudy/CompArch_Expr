@@ -55,7 +55,7 @@ module controller (/*AUTOARG*/
 	// instruction decode
 	reg rs_used, rt_used;
 	
-	always @(*) begin
+	always @(*) begin		/* Decode inst */
 		pc_src = PC_NEXT;
 		imm_ext = 0;
 		exe_a_src = EXE_A_RS;
@@ -202,7 +202,7 @@ module controller (/*AUTOARG*/
 		endcase
 	end
 	
-	// pipeline control
+	/* pipeline control (stall) */
 	reg reg_stall;
 	reg branch_stall;
 	wire [4:0] addr_rs, addr_rt;
