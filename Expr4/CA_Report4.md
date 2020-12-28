@@ -61,19 +61,19 @@
 
 - Data hazards happen mostly because that one instruction is reading a register which is NOT written back by the previous instruction yet. For example, in the following figure, the value of register `$1` is required by all instructions except the first one.
 
-  <img src="img/inst_demo.png" alt="inst_demo" style="zoom: 67%;" />
+  <img src="img/inst_demo.png" alt="inst_demo" style="zoom: 50%;" />
 
   In this case, our pipeline will have to **stall** until the result of the first instruction is written back to register `$1` (if we don't have a design for forwarding).
 
 - We can minimize *Data Hazard Stalls* by using ***Forwarding***: transfer the needed (correct) data to other stages in the datapath even if the current instruction isn't finished. In most cases, the data hazard can be resolved by Forwarding (also called *bypassing*, or *short-circuiting*).
 
-  <img src="img/forwarding_principle.png" alt="forwarding_principle" style="zoom:67%;" />
+  <img src="img/forwarding_principle.png" alt="forwarding_principle" style="zoom: 50%;" />
 
   We can find that this time the pipeline isn't stalling.
 
 - However, in some cases, data hazards can NOT be resolved by Forwarding and require pipeline stalls.
 
-  <img src="img/stall.png" alt="stall" style="zoom:67%;" />
+- 
 
 ### 2.2 Datapath
 
