@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr4/lab4-forwarding/mips_top.xst" -ofn "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr4/lab4-forwarding/mips_top.syr" 
+xst -intstyle ise -ifn "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr4/lab4-forwarding/mips_top.xst" -ofn "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr4/lab4-forwarding/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc7k325t-fbg676-2L mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc7k325t-fbg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -mt off mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
