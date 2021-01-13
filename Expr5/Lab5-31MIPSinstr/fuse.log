@@ -1,0 +1,34 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/sim_mips_isim_beh.exe" -prj "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/sim_mips_beh.prj" "work.sim_mips" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/regfile.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/alu.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/datapath.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/controller.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/mips_core.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/inst_rom.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/data_ram.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/mips.v" into library work
+Analyzing Verilog file "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/sim_mips.v" into library work
+Analyzing Verilog file "D:/ProgramFiles/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/mips_core.v" Line 78: Size mismatch in connection of port <pc_src>. Formal port size is 2-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/mips_core.v" Line 128: Size mismatch in connection of port <pc_src_ctrl>. Formal port size is 2-bit while actual signal size is 3-bit.
+Completed static elaboration
+Compiling module controller
+Compiling module regfile
+Compiling module alu
+Compiling module datapath
+Compiling module mips_core
+Compiling module inst_rom
+Compiling module data_ram
+Compiling module mips
+Compiling module sim_mips
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 10 Verilog Units
+Built simulation executable D:/Asudy/WorkSpace/GitHub/CA_Expr/Expr5/Lab5-31MIPSinstr/sim_mips_isim_beh.exe
+Fuse Memory Usage: 29784 KB
+Fuse CPU Usage: 374 ms

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Asudy\WorkSpace\GitHub\CA_Expr\Expr5\Lab5-31MIPSinstr\mips_top.ncd
+OUTFILE=D:\Asudy\WorkSpace\GitHub\CA_Expr\Expr5\Lab5-31MIPSinstr\mips_top.bit
+FAMILY=Kintex7
+PART=xc7k325t-2lfbg676
+WORKINGDIR=D:\Asudy\WorkSpace\GitHub\CA_Expr\Expr5\Lab5-31MIPSinstr
+LICENSE=ISE
+USER_INFO=__0_0_0
